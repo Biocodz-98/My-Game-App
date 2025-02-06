@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:wght@300;400&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="index.css">
+    <title>Color Guessing Game</title>
+    
+</head>
+<body>
+    <h1 data-testid="gameInstructions">Guess the correct color before time runs out!</h1>
+    
+    <label for="difficulty">Select Difficulty:</label>
+    <select id="difficulty">
+        <option value="easy">Easy</option>
+        <option value="medium">Medium</option>
+        <option value="hard">Hard</option>
+    </select>
+    
+    <div id="colorBox" data-testid="colorBox"></div>
+    
+    <div id="colorOptions"></div>
+    
+    <p id="gameStatus" data-testid="gameStatus">Choose a color!</p>
+    <p>Score: <span id="score" data-testid="score">0</span></p>
+    <p>High Score: <span id="highScore">0</span></p>
+    <p>Lives: <span id="lives">3</span></p>
+    <p>Time Left: <span id="time">15</span> seconds</p>
+    
+    <button id="newGameButton" data-testid="newGameButton">New Game</button>
+    
+    <h2>Leaderboard</h2>
+    <div id="leaderboard"></div>
+    
+    <script src="index.js"></script>
+</body>
+</html>

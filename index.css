@@ -1,0 +1,148 @@
+body {
+  background-color: #121212;
+  color: #ffffff;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  padding: 20px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+h1, h2 {
+  color: #ffcc00;
+  animation: pulse 1.5s infinite;
+}
+
+#colorBox {
+  width: 150px;
+  height: 150px;
+  margin: 20px auto;
+  border: 2px solid #ffffff;
+  transition: transform 0.3s ease, background-color 0.5s ease-in-out;
+  animation: colorPulse 2s infinite alternate;
+}
+
+#colorOptions {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+#colorOptions button {
+  width: 50px;
+  height: 50px;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+  border-radius: 50%;
+  animation: bounceIn 0.8s ease-in;
+}
+
+#colorOptions button:hover {
+  transform: scale(1.2);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+}
+
+button {
+  background-color: #ffcc00;
+  color: #121212;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin-top: 10px;
+  font-size: 16px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #ffaa00;
+  transform: scale(1.1);
+}
+
+#gameStatus {
+  font-size: 18px;
+  margin-top: 10px;
+  transition: opacity 0.5s ease, transform 0.3s ease;
+  animation: fadeIn 1s ease-in;
+}
+
+#leaderboard {
+  background-color: #222;
+  padding: 10px;
+  margin-top: 20px;
+  border-radius: 5px;
+  animation: slideIn 1s ease-in-out;
+}
+
+select {
+  padding: 10px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  transition: background-color 0.3s ease;
+}
+
+select:hover {
+  background-color: #444;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+@keyframes colorPulse {
+  0% { transform: scale(1); }
+  100% { transform: scale(1.1); }
+}
+
+@keyframes bounceIn {
+  0% { transform: scale(0); }
+  80% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+@keyframes slideIn {
+  from { transform: translateY(-20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  #colorBox {
+      width: 120px;
+      height: 120px;
+  }
+  #colorOptions button {
+      width: 40px;
+      height: 40px;
+  }
+  button {
+      font-size: 14px;
+      padding: 8px 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  #colorBox {
+      width: 100px;
+      height: 100px;
+  }
+  #colorOptions button {
+      width: 35px;
+      height: 35px;
+  }
+  button {
+      font-size: 12px;
+      padding: 6px 12px;
+  }
+}
